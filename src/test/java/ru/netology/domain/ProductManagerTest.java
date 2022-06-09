@@ -22,7 +22,7 @@ public class ProductManagerTest {
     }
 
 
-    Book book1 = new Book(1, "Java", 10.25, "Author1");
+    Book book1 = new Book(1, "Java", 10.25, "Author1_s");
     Book book2 = new Book(2, "JS", 11.25, "Author2");
     Book book3 = new Book(3, "Basic", 12.25, "Author3");
     Smartphone smartphone1 = new Smartphone(4, "iPhone", 999.99, "Apple Inc.");
@@ -79,7 +79,7 @@ public class ProductManagerTest {
     public void checkFindByQuery() {
         ProductManager manager = new ProductManager(repository);
         Product[] expected = manager.searchByQuery("s");
-        Product[] actual = new Product[]{book3, smartphone3};
+        Product[] actual = new Product[]{book1, book3, smartphone3};
         assertArrayEquals(expected, actual);
     }
 }
