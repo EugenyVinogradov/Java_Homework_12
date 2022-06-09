@@ -1,13 +1,15 @@
-package ru.netology.domain.classes;
+package ru.netology.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import ru.netology.domain.classes.Product;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
 
-public class Book extends Product{
+public class Product {
+    protected int id;
+    protected String name;
+    protected double cost;
 }
